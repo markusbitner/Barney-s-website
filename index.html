@@ -3,45 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Projects & Involvements</title>
+  <title>Barney | Engineering Portfolio</title>
 
-  <!-- ONLY your CSS (Bootstrap removed to prevent conflicts) -->
   <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <header>
-    <div class="site-container">
-      <nav>
-        <a href="index.html">Home</a>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <div class="logo">
+        <a href="index.html">Barney</a>
+      </div>
 
-        <div class="nav-links">
-          <a href="page1.html">Contact Me</a>
-          <a href="#">More</a>
-        </div>
+      <nav class="nav-links">
+        <a href="page1.html">Contact</a>
+        <a href="#projects">Projects</a>
+        <a href="#involvements">Involvements</a>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="site-container">
-      <h1>About Me</h1>
+    <div class="site-container hero-grid">
 
-      <p>
-        Hi! My name is Barney, I am a second year Electrical Engineering student interested in rocketry,
-        hardware design, and communication systems. I enjoy learning and building things, and I'm currently
-        looking for a summer internship.<br><br>
-        Click on my involvements and projects to learn more!
-      </p>
+      <div>
+        <h1>Electrical Engineering Student</h1>
+
+        <p>
+          I design embedded systems, PCB hardware, and control systems for rocketry and personal engineering projects.
+          Currently seeking a summer internship focused on hardware or systems engineering.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="page1.html">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <p><strong>Focus Areas</strong></p>
+        <ul>
+          <li>Embedded Systems</li>
+          <li>PCB Design</li>
+          <li>Signal Integrity</li>
+          <li>Rocketry Hardware</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
   <!-- INVOLVEMENTS -->
-  <section>
+  <section id="involvements" class="section">
     <div class="site-container">
+
       <h2>Involvements</h2>
 
       <div class="grid">
@@ -49,38 +67,39 @@
         <a href="starr.html" class="card-link">
           <div class="card">
             <h3>STARR Rocketry Club</h3>
-            <p>
-              Payload member of STARR (University Rocketry Club). Involved in designing PCB for payload electrical system.
-            </p>
+            <p>Payload electronics member working on PCB design and signal integrity systems.</p>
           </div>
         </a>
 
       </div>
+
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section>
+  <section id="projects" class="section">
     <div class="site-container">
+
       <h2>Projects</h2>
 
       <div class="grid">
 
         <a href="bike aux.html" class="card-link">
           <div class="card">
-            <h3>Bike Auxiliary Project</h3>
-            <p>Designing a bike aux system with lights and buzzer.</p>
+            <h3>Bike Auxiliary System</h3>
+            <p>Custom embedded system for lighting and audio control using Li-ion battery power.</p>
           </div>
         </a>
 
       </div>
+
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer class="site-footer">
     <div class="site-container">
-      <p>© 2026 Barney — Electrical Engineering Portfolio</p>
+      <p>© 2026 Barney — Built with embedded systems mindset</p>
     </div>
   </footer>
 
