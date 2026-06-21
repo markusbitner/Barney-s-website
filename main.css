@@ -1,22 +1,23 @@
 /* =========================
-   RESET
+   HARD RESET (IMPORTANT)
    ========================= */
 
-* {
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: #0f1115;
   color: #e6e6e6;
-  line-height: 1.6;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* kill ALL default spacing behavior */
+h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
 }
 
 /* =========================
-   LAYOUT (FIXES YOUR MARGINS)
+   LAYOUT SYSTEM
    ========================= */
 
 .site-container {
@@ -24,16 +25,17 @@ body {
   margin: 0 auto;
 }
 
+/* REAL spacing between sections */
 section {
   margin: 4rem 0;
 }
 
 /* =========================
-   HEADER
+   HEADER (fix ugly top nav)
    ========================= */
 
 .site-header {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid #232838;
 }
 
@@ -47,7 +49,7 @@ section {
 }
 
 /* =========================
-   TYPOGRAPHY
+   TYPOGRAPHY FIX
    ========================= */
 
 h1 {
@@ -58,6 +60,7 @@ h1 {
 h2 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 h3 {
@@ -71,25 +74,7 @@ p {
 }
 
 /* =========================
-   CARDS (THIS IS YOUR MAIN UI)
-   ========================= */
-
-.card {
-  background: #151923;
-  border: 1px solid #232838;
-  border-radius: 14px;
-  padding: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-/* =========================
-   LINKS
+   LINKS (fix blue ugliness)
    ========================= */
 
 a {
@@ -102,6 +87,27 @@ a:hover {
 }
 
 /* =========================
+   CARD SYSTEM
+   ========================= */
+
+.card {
+  background: #151923;
+  border: 1px solid #232838;
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* images must behave */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* =========================
    FOOTER
    ========================= */
 
@@ -110,4 +116,5 @@ a:hover {
   padding: 2rem 0;
   margin-top: 4rem;
   color: #a0a6b2;
+  font-size: 0.9rem;
 }
