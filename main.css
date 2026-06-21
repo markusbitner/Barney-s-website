@@ -1,4 +1,3 @@
-
 /* =========================
    RESET
    ========================= */
@@ -10,17 +9,14 @@
 }
 
 body {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: #0f1115;
   color: #e6e6e6;
   line-height: 1.6;
-   margin: 0;
-   padding: 0;
 }
 
 /* =========================
-   LAYOUT SPACING SYSTEM
-   (THIS FIXES YOUR MARGINS)
+   LAYOUT (FIXES YOUR MARGINS)
    ========================= */
 
 .site-container {
@@ -28,9 +24,8 @@ body {
   margin: 0 auto;
 }
 
-/* KEY FIX: creates actual vertical spacing */
-.section {
-  margin: 3.5rem 0;
+section {
+  margin: 4rem 0;
 }
 
 /* =========================
@@ -38,80 +33,72 @@ body {
    ========================= */
 
 .site-header {
-  padding: 3rem 0 2rem 0;
+  padding: 2rem 0;
   border-bottom: 1px solid #232838;
 }
 
-.header-title h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.3rem;
+.site-header a {
+  color: #a0a6b2;
+  text-decoration: none;
 }
 
-.header-title p {
-  color: #a0a6b2;
+.site-header a:hover {
+  color: #ffffff;
 }
 
 /* =========================
    TYPOGRAPHY
    ========================= */
 
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
 h2 {
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
-  margin: 0.8rem 0 0.5rem 0;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
   color: #a0a6b2;
+  margin-bottom: 1rem;
 }
 
 /* =========================
-   GRID SYSTEM
-   ========================= */
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-/* =========================
-   CARDS
+   CARDS (THIS IS YOUR MAIN UI)
    ========================= */
 
 .card {
   background: #151923;
   border: 1px solid #232838;
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 1.2rem;
-  transition: 0.2s ease;
-  overflow: hidden;
+  margin-bottom: 1.5rem;
 }
 
-/* hover effect */
-.card:hover {
-  transform: translateY(-4px);
-  border-color: #6ea8fe;
-}
-
-/* card link wrapper */
-.card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-/* images in cards */
 .card img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 0.8rem;
-  background: #0f1115;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+  color: #6ea8fe;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.85;
 }
 
 /* =========================
@@ -123,15 +110,4 @@ p {
   padding: 2rem 0;
   margin-top: 4rem;
   color: #a0a6b2;
-  font-size: 0.9rem;
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-
-@media (max-width: 768px) {
-  .header-title h1 {
-    font-size: 1.8rem;
-  }
 }
