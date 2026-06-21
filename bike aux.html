@@ -12,38 +12,54 @@
 
 <header class="site-header">
   <div class="site-container">
-    <a href="index.html">← Back to Home</a>
+    <a href="index.html">← Back</a>
   </div>
 </header>
 
 <main class="site-container">
 
-  <section class="section">
+  <section>
     <h1>Bike Auxiliary System</h1>
-    <p>Embedded system for bike lighting and audio control.</p>
+
+    <p>
+      Powering lights and buzzer from a Li-ion battery system.
+    </p>
   </section>
 
-  <section class="section">
-    <h2>Overview</h2>
-    <p>One Li-ion battery powers lights + buzzer system.</p>
-  </section>
-
-  <section class="section">
-    <h2>Key Components</h2>
+  <section>
+    <h2>Buzzer Subsystem</h2>
 
     <div class="card">
-      <img src="placeholder.png">
-      <h3>Buzzer Circuit</h3>
-      <p>Uses timer IC for frequency generation.</p>
+      <h3>Problem</h3>
+      <p>Bike bell unusable with gloves.</p>
     </div>
 
+    <div class="card">
+      <h3>Solution</h3>
+      <p>Electronic buzzer system using LTC6990 for frequency control.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/LTC6990 in LTspice.png">
+      <p>LTspice simulation showing 4kHz output.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/Buzzer Board schematic.png">
+      <p>Schematic design in Altium.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/Buzzer Board layout.png">
+      <p>PCB layout design.</p>
+    </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
   <div class="site-container">
-    <p>© 2026 Barney</p>
+    <p>© 2026 Bike Aux</p>
   </div>
 </footer>
 
