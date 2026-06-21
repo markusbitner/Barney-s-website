@@ -1,66 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bike Auxiliary System</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Project: Bike Auxiliary System</title>
 
-  <link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="site-container">
-    <a href="index.html">← Back</a>
-  </div>
+	<div class="site-container">
+		<a href="index.html">← Home</a>
+	</div>
 </header>
 
 <main class="site-container">
 
-  <section>
-    <h1>Bike Auxiliary System</h1>
+	<!-- TITLE -->
+	<section>
+		<h1>Bike Auxiliary System</h1>
 
-    <p>
-      Powering lights and buzzer from a Li-ion battery system.
-    </p>
-  </section>
+		<p>
+			To power a buzzer, head lights, and tail lights with one (or more) rechargeable Li-ion battery.<br>
+			Where the buzzer will act as a bell which will be activated by a button. The head lights and tail lights will be activated with one switch.<br><br>
 
-  <section>
-    <h2>Buzzer Subsystem</h2>
+			--Overall design Considerations--<br>
+			<span style="margin-left: 40px; display: inline-block;">
+				- as small as possible<br>
+				- minimize the number of re-order PCBs due to non-design related issues <br>
+			</span>
+			<br><br>
 
-    <div class="card">
-      <h3>Problem</h3>
-      <p>Bike bell unusable with gloves.</p>
-    </div>
+			(All blue texts are links to component datasheets)
+		</p>
+	</section>
 
-    <div class="card">
-      <h3>Solution</h3>
-      <p>Electronic buzzer system using LTC6990 for frequency control.</p>
-    </div>
+	<!-- BUZZER -->
+	<section>
+		<h2>Buzzer Sub-system</h2>
 
-    <div class="card">
-      <img src="image/LTC6990 in LTspice.png">
-      <p>LTspice simulation showing 4kHz output.</p>
-    </div>
+		<div class="card">
+			<p>
+				Problem: My standard bike bell cannot be rung with gloves in the winter<br>
+				Solution: Make a 'bell' that can be activated with a button<br><br>
 
-    <div class="card">
-      <img src="image/Buzzer Board schematic.png">
-      <p>Schematic design in Altium.</p>
-    </div>
+				Buzzer used:
+				<a href="https://puiaudio.com/file/specs-AI-3035-TWT-3V-R.pdf">AI-3035-TWT-3V-R</a><br>
 
-    <div class="card">
-      <img src="image/Buzzer Board layout.png">
-      <p>PCB layout design.</p>
-    </div>
-  </section>
+				<span style="margin-left: 40px; display: inline-block;">
+					- resonance frequency (3500+-500Hz) and sound pressure level (100dB at 10cm) is similar to that of a typical bike bell<br>
+					- continuous tone, more control from the user<br>
+					- through hole, easier to test and solder
+				</span><br><br>
+
+				To achieve the desired 4000Hz,
+				<a href="https://www.analog.com/media/en/technical-documentation/data-sheets/ltc6990.pdf">LTC6990</a>
+				is used to set the output frequency (div code = 7). The
+				<a href="https://beta-tools.analog.com/timerblox/LTC6990#">LTC6990 online tool</a>
+				is used to help determine the value of resistance needed to set the frequency to 4kHz<br><br>
+
+				The plan: First simulate the design in LTspice to ensure the resistance setting will achieve 4kHz, then design the PCB board with Altium Designer
+			</p>
+		</div>
+
+		<div class="card">
+			<img src="image/LTC6990 in LTspice.png" alt="LTspice simulation">
+			<p>Image 1: LTC6990 being simulated in LTspice, with the output frequency of 4kHz at a 3V output when the input is a 3VDC supply</p>
+		</div>
+
+		<div class="card">
+			<img src="image/Buzzer Board schematic.png" alt="Schematic">
+			<p>Image 2: Buzzer board schematic with the resistance value simulated in LTspice and 3V3 input and output both with <a href="https://www.digikey.ca/en/products/detail/jst-sales-america-inc/B2B-XH-A/1651045">B2B-XH-A</a> 2-pin headers</p>
+		</div>
+
+		<div class="card">
+			<img src="image/Buzzer Board layout.png" alt="PCB layout">
+			<p>Image 3: Buzzer board PCB layout viewed from top layer with components from schematic and I/O ports labeled</p>
+		</div>
+
+		<div class="card">
+			<p>
+				--Specific Design Considerations--<br>
+				<span style="margin-left: 40px; display: inline-block;">- N/A</span>
+			</p>
+		</div>
+	</section>
+
+	<!-- PLACEHOLDERS (kept EXACTLY as in original) -->
+	<section>
+		<h2>Head Light Sub-system</h2>
+	</section>
+
+	<section>
+		<h2>Tail Light Sub-system</h2>
+	</section>
+
+	<section>
+		<h2>Power Distribution Sub-system</h2>
+	</section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="site-container">
-    <p>© 2026 Bike Aux</p>
-  </div>
+	<div class="site-container">
+		<p>© 2026 Bike Auxiliary System</p>
+	</div>
 </footer>
 
 </body>
