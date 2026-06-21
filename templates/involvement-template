@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Involvement Page</title>
+
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-container">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="site-container">
+
+    <section class="section">
+      <h1>INVOLVEMENT TITLE</h1>
+      <p>Short description of your role.</p>
+    </section>
+
+    <section class="section">
+      <h2>Role</h2>
+
+      <div class="card">
+        <img src="placeholder.png">
+        <h3>Main Responsibility</h3>
+        <p>Explain your work here.</p>
+      </div>
+
+    </section>
+
+    <section class="section">
+      <h2>Technical Work</h2>
+
+      <div class="card">
+        <img src="placeholder.png">
+        <h3>System / Component</h3>
+        <p>Details here.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container">
+      <p>© 2026 Barney</p>
+    </div>
+  </footer>
+
+</body>
+</html>
