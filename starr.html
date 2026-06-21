@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>STARR Payload Electronics</title>
+  <title>STARR Rocketry Club</title>
 
   <link rel="stylesheet" href="main.css">
 </head>
@@ -11,122 +11,62 @@
 <body>
 
   <!-- HEADER -->
-  <header>
-    <div class="container">
-      <nav>
-        <a href="index.html">Home</a>
-        <div>
-          <a href="page1.html">Contact Me</a>
-          <a href="#">More</a>
-        </div>
-      </nav>
+  <header class="site-header">
+    <div class="site-container">
+      <a href="index.html">← Back to Home</a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1>Payload Electronics — STARR Rocketry</h1>
+  <!-- MAIN -->
+  <main class="site-container">
+
+    <!-- TITLE -->
+    <section class="section">
+      <h1>STARR Rocketry Club</h1>
       <p>
-        Designing signal integrity systems for payload control, including buffering, connectors,
-        and noise mitigation for motors, servos, and data buses.
+        Payload electronics member working on embedded systems, PCB design, and signal integrity
+        for rocket payload control systems.
       </p>
-    </div>
-  </section>
+    </section>
 
-  <!-- OVERVIEW -->
-  <section>
-    <div class="container">
-      <h2>Overview</h2>
-
-      <p>
-        The payload motherboard collects sensor data and controls servos and motors during descent.
-        Because signals degrade due to distance and vibration, buffering and signal conditioning are critical.
-      </p>
-    </div>
-  </section>
-
-  <!-- BUFFER BOARD -->
-  <section>
-    <div class="container">
-      <h2>Buffer Board</h2>
-
-      <p>
-        Problem: Noisy PWM signals from the payload motherboard caused unstable servo and motor behavior.
-      </p>
-
-      <p>
-        Solution: A dedicated buffer board using
-        <a href="https://www.onsemi.com/download/data-sheet/pdf/nc7wz16-d.pdf">NC7WZ16</a>
-        to clean and stabilize control signals.
-      </p>
-
-      <h3>My Role</h3>
-      <ul>
-        <li>Schematic design in Altium Designer</li>
-        <li>Component selection</li>
-        <li>PCB layout optimized for signal integrity and manufacturability</li>
-        <li>Iterative redesign aligned with power distribution updates</li>
-      </ul>
-
-      <h3>Design Considerations</h3>
-      <ul>
-        <li>Proper chip power delivery</li>
-        <li>Routing power for servos and motors through the board</li>
-        <li>Ensuring clean output: GND, filtered signal, and power lines</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CONNECTOR BOARD -->
-  <section>
-    <div class="container">
-      <h2>Connector Board</h2>
-
-      <p>
-        Problem: Data buses became noisy, affecting communication reliability with the motherboard.
-      </p>
-
-      <p>
-        Solution: Designed a connector and buffer board using
-        <a href="https://www.ti.com/lit/ds/symlink/sn74lvc126a-q1.pdf">SN74LVC126A</a>
-        for SPI buffering and
-        <a href="https://www.ti.com/lit/ds/symlink/tca4307.pdf">TCA4307</a>
-        for I2C hot-swapping and signal conditioning.
-      </p>
-
-      <h3>My Role</h3>
-      <ul>
-        <li>Schematic design in Altium Designer</li>
-        <li>Component selection and system integration</li>
-        <li>PCB layout with focus on compactness and signal integrity</li>
-      </ul>
-
-      <h3>Design Considerations</h3>
-      <ul>
-        <li>Stable chip power distribution</li>
-        <li>Clean routing for high-speed data buses</li>
-        <li>Easy integration with existing payload architecture</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- IMAGE -->
-  <section>
-    <div class="container">
-      <h2>Manufactured Boards</h2>
+    <!-- ROLE -->
+    <section class="section">
+      <h2>My Role</h2>
 
       <div class="card">
-        <img src="image/boards.jpg" alt="Buffer and connector boards" style="width:100%; border-radius:8px;">
-        <p>Connector board (left) and buffer board (right) after manufacturing.</p>
+        <img src="placeholder.png" alt="Payload electronics">
+
+        <h3>Payload Electronics Team</h3>
+        <p>
+          I work on designing and integrating electronics systems responsible for controlling
+          payload behavior during descent, including motors, servos, and data handling.
+        </p>
       </div>
-    </div>
-  </section>
+
+    </section>
+
+    <!-- TECHNICAL WORK -->
+    <section class="section">
+      <h2>Technical Work</h2>
+
+      <div class="card">
+        <img src="placeholder.png" alt="PCB design">
+
+        <h3>PCB & Signal Integrity</h3>
+        <p>
+          Designed buffer and connector boards to reduce noise in PWM and data lines caused by vibration
+          and long signal paths in the rocket payload system.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>© 2026 STARR Rocketry Payload Electronics</p>
+  <footer class="site-footer">
+    <div class="site-container">
+      <p>© 2026 Barney — STARR Rocketry</p>
     </div>
   </footer>
 
